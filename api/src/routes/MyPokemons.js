@@ -30,21 +30,13 @@ router.get('/', async function(req, res) {
                 objDB.id = element.dataValues.id;
                 objDB.name = element.dataValues.name
                 objDB.types = arrayTypes
+                objDB.urlImage = element.dataValues.urlImage
 
                 arrayDB.push(objDB)
 
                 objDB = {}
                 arrayTypes = [];
                 });
-
-                /* console.log('el resultado ES, ',arrayDB) */
-
-                /*  arrayDB.forEach(element=>{
-                console.log('El resultado construido es')
-                console.log(element)
-                }) */
-
-                /* console.log('la longitud del array es,',arrayDB.length ) */
 
                 res.json(arrayDB)
 

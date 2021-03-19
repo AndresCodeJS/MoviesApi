@@ -59,7 +59,7 @@ router.get('/:limit/:index', async function(req, res) {
                     objDB.height = element.dataValues.height
                     objDB.weight = element.dataValues.weight
                     objDB.types = arrayTypes
-
+                    objDB.urlImage = element.dataValues.urlImage
                     arrayDB.push(objDB)
 
                     objDB = {}

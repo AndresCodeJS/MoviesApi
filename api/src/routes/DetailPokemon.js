@@ -36,7 +36,7 @@ router.get('/:id', async function(req, res) {
                     objDB.height = datosTabla.dataValues.height
                     objDB.weight = datosTabla.dataValues.weight
                     objDB.types = arrayTypes
-
+                    objDB.urlImage = datosTabla.dataValues.urlImage
             }).catch(err=>{
                 console.log(err)
             })
