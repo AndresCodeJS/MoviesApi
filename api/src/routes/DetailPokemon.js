@@ -81,10 +81,6 @@ router.get('/:id', async function(req, res) {
         console.log(err);
     }
 
-    
-
-
-
 
 });
 

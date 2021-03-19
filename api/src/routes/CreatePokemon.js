@@ -64,6 +64,7 @@ router.post('/', async function(req, res) {
             speed:req.body.speed,
             height:req.body.height,
             weight:req.body.weight,
+            urlImage: req.body.urlImage
         })
         .then((reponse)=>{
 
