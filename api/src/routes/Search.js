@@ -38,12 +38,12 @@ router.get('/:name', async function(req, res) {
 
                 objDB.id = element.dataValues.id;
                 objDB.name = element.dataValues.name
-             /*    objDB.hp = element.dataValues.hp
+                objDB.hp = element.dataValues.hp
                 objDB.attack = element.dataValues.attack
                 objDB.defense = element.dataValues.defense
                 objDB.speed = element.dataValues.speed
                 objDB.height = element.dataValues.height
-                objDB.weight = element.dataValues.weight */
+                objDB.weight = element.dataValues.weight
                 objDB.types = arrayTypes
 
                 arrayDB.push(objDB)
@@ -79,6 +79,12 @@ router.get('/:name', async function(req, res) {
             result.name = data.species.name;
             result.id = data.id;
             result.types = [];
+            result.hp = data.stats[0].base_stat;
+            result.attack =data.stats[1].base_stat;
+            result.defense =data.stats[2].base_stat;
+            result.speed =data.stats[5].base_stat;
+            result.height =data.height;
+            result.weight =data.weight;
 
             data.types.forEach(value=>{
                 result.types.push(value.type.name)
