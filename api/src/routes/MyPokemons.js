@@ -29,6 +29,12 @@ router.get('/', async function(req, res) {
 
                 objDB.id = element.dataValues.id;
                 objDB.name = element.dataValues.name
+                objDB.hp = datosTabla.dataValues.hp
+                objDB.attack = element.dataValues.attack
+                objDB.defense = element.dataValues.defense
+                objDB.speed = element.dataValues.speed
+                objDB.height = element.dataValues.height
+                objDB.weight = element.dataValues.weight
                 objDB.types = arrayTypes
                 objDB.urlImage = element.dataValues.urlImage
 
