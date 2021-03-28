@@ -29,7 +29,7 @@ router.get('/', async function(req, res) {
 
                 objDB.id = element.dataValues.id;
                 objDB.name = element.dataValues.name
-                objDB.hp = datosTabla.dataValues.hp
+                objDB.hp = element.dataValues.hp
                 objDB.attack = element.dataValues.attack
                 objDB.defense = element.dataValues.defense
                 objDB.speed = element.dataValues.speed
