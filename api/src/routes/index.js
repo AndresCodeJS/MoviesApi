@@ -11,6 +11,7 @@ const CreatePokemon = require('./CreatePokemon')
 const MyPokemons = require('./MyPokemons')
 const MovieSuggestion = require('./MovieSuggestion')
 const Movies = require('./Movies')
+const Delete = require('./DeletePokemon')
 
 
 const router = Router();
@@ -28,13 +29,6 @@ router.use('/create',CreatePokemon);
 router.use('/mypokemons',MyPokemons);
 router.use('/suggestion',MovieSuggestion);
 router.use('/movies',Movies);
-
-/* router.get('/', function(req, res) {
-
-    res.json({title: 'titulo12',
-              subtitble: 'subtitulo'});
-
-}); */
-
+router.use('/delete',Delete);
 
 module.exports = router;
