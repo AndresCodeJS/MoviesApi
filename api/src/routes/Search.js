@@ -81,6 +81,7 @@ router.get('/:name', async function(req, res) {
             result.types = [];
             result.hp = data.stats[0].base_stat;
             result.attack =data.stats[1].base_stat;
+            result.specialAttack = data.stats[3].base_stat;
             result.defense =data.stats[2].base_stat;
             result.speed =data.stats[5].base_stat;
             result.height =data.height;
