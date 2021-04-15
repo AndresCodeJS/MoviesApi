@@ -13,10 +13,6 @@ module.exports = (sequelize) => {
     language:{
         type: DataTypes.STRING
     },
-
-    option:{
-        type: DataTypes.STRING
-    },
     
     urlvideo:{
         type: DataTypes.STRING

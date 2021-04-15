@@ -14,21 +14,45 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING, 
     },
 
+    duration:{
+      type: DataTypes.STRING, 
+    },
+
+    backgroundimage:{
+      type: DataTypes.STRING(1234), 
+    },
+
+    trailer:{
+      type: DataTypes.STRING,
+    },
+
     year:{
         type: DataTypes.INTEGER,
     },
 
-    rate:{
-        type: DataTypes.DECIMAL,
+    rating:{
+        type: DataTypes.STRING,
     },
 
     urlposter:{
-        type: DataTypes.STRING
+        type: DataTypes.STRING(1234)  
     },
 
     description:{
-        type: DataTypes.STRING
-    }
+        type: DataTypes.STRING(1234)  
+    },
+
+    category1:{
+      type: DataTypes.STRING
+    },
+
+    category2:{
+      type: DataTypes.STRING
+    },
+
+    category3:{
+      type: DataTypes.STRING
+    },
 
     
   });

@@ -64,12 +64,16 @@ sequelize.models = Object.fromEntries(capsEntries);
 // Para relacionarlos hacemos un destructuring
 const { Pokemon } = sequelize.models;
 const { Types } = sequelize.models;
+const {Movies,Videos } = sequelize.models;
 
 // Aca vendrian las relaciones
 // Product.hasMany(Reviews);
 
 Pokemon.belongsToMany(Types,{through:'pokemontypes'});
 Types.belongsToMany(Pokemon,{through:'pokemontypes'});
+
+Movies.hasMany(Videos);
+Videos.belongsTo(Movies)
 
 
 module.exports = {
