@@ -17,11 +17,22 @@
 //     =====`-.____`.___ \_____/___.-`___.-'=====
 //                       `=---='
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+const axios = require("axios");
+
 function requestApi() {
   let counter = 1;
+  let refresh = 0;
   return async function () {
     setInterval(async () => {
       counter++;
+      refresh++;
+      if(refresh == 5){
+        const { data } = await axios.get(
+          `https://app-fullmovies.herokuapp.com/refresh/server`
+        ); 
+        console.log(data)
+        refresh = 0;
+      }
       console.log('hola ',counter)
     },5000)
   }

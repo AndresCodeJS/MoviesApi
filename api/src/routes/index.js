@@ -12,7 +12,7 @@ const MyPokemons = require('./MyPokemons')
 const MovieSuggestion = require('./MovieSuggestion')
 const Movies = require('./Movies')
 const Delete = require('./DeletePokemon')
-
+const RefreshServer = require('./RefreshServer')
 
 const router = Router();
 
@@ -30,5 +30,5 @@ router.use('/mypokemons',MyPokemons);
 router.use('/suggestion',MovieSuggestion);
 router.use('/movies',Movies);
 router.use('/delete',Delete);
-
+router.use('/refresh',RefreshServer);
 module.exports = router;
