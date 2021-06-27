@@ -17,12 +17,23 @@
 //     =====`-.____`.___ \_____/___.-`___.-'=====
 //                       `=---='
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+function requestApi() {
+  let counter = 1;
+  return async function () {
+    setInterval(async () => {
+      counter++;
+      console.log('hola ',counter)
+    },5000)
+  }
+}
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 //
 // Syncing all the models at once.
 conn.sync({ force: false}).then(() => {
   server.listen(process.env.PORT, () => {
+    let requestApiFunction = requestApi();
+    requestApiFunction();
     console.log('%s listening at 4545'); // eslint-disable-line no-console
   });
 });
